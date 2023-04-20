@@ -1,0 +1,49 @@
+#include <stdio.h>
+int main() {
+    int opcion, n, num, suma = 0, des;
+    double suma_fracc = 0;
+
+    printf("Que opcion desea realizar?\n");
+    scanf("%d", &opcion);
+
+    switch (opcion) {
+        case 1: {
+            printf("Ingresa un valor: \n");
+            scanf("%d", &n);
+                    
+            suma_fracc = 0;
+            for (double i = 1; i <= n; i++) {
+                suma_fracc += (double)i / (double)(2 * i);
+            }
+            printf("La suma es: %.2f\n", suma_fracc);
+            break;
+        }
+        case 2: {
+            printf("Ingresa los valores que quieres sumar\n");
+                
+            do {
+                printf("Ingresa un valor: ");
+                scanf("%d", &num);
+                
+                if (num >= 0) {
+                    suma += num;
+                }
+            } while (num >= 0);
+                
+            printf("La suma de los valores ingresados es: %d\n", suma);
+            break;
+        }
+        case 3:
+            printf("Ingresa un valor: \n");
+            scanf("%d", &des);
+                while(des >= 0) {
+                    printf("%d\n", des);
+                    des--;
+                }
+                break;
+        default:
+            printf("Opcion no valida.\n");
+    }
+        
+    return 0;
+} 
